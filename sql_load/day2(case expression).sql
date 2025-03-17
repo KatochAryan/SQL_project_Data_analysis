@@ -1,0 +1,29 @@
+-- SELECT
+-- job_title_short,
+-- job_location,
+-- CASE
+-- WHEN job_location ='Anywhere' THEN 'REMOTE'
+-- WHEN job_location='New York, NY' THEN 'LOCAL'
+-- ELSE 'ON-SITE'
+-- END AS Location_Category
+-- FROM job_postings_fact;
+-- ---------------------------------------------------------------
+-- SELECT
+-- COUNT(job_id) AS JOB_COUNT,
+-- CASE
+-- WHEN job_location ='Anywhere' THEN 'REMOTE'
+-- WHEN job_location='New York, NY' THEN 'LOCAL'
+-- ELSE 'ON-SITE'
+-- END AS Location_Category
+-- FROM job_postings_fact
+-- GROUP BY Location_Category;
+-- SELECT
+-- COUNT(job_id) AS JOB_COUNT,
+-- CASE
+-- WHEN job_location ='Anywhere' THEN 'REMOTE'
+-- WHEN job_location='New York, NY' THEN 'LOCAL'
+-- ELSE 'ON-SITE'
+-- END AS Location_Category
+-- FROM job_postings_fact
+-- WHERE job_title_short ='Data Analyst'
+-- GROUP BY Location_Category;

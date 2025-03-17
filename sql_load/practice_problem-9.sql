@@ -1,0 +1,28 @@
+-- SELECT
+--     job_schedule_type,
+--     AVG(salary_year_avg) AS average_yearly_salary,
+--     AVG(salary_hour_avg) AS average_hour_salary
+-- FROM job_postings_fact
+-- WHERE 
+--     job_posted_date >'2023-06-01'
+-- GROUP BY
+--     job_schedule_type
+-- ------------------------------------------------
+-- SELECT
+-- EXTRACT (MONTH FROM job_posted_date AT TIME ZONE 'UTC' AT TIME ZONE 'EST') AS posting_month,
+-- COUNT(*) AS JOB_COUNT
+-- FROM job_postings_fact
+-- WHERE EXTRACT (YEAR FROM job_posted_date AT TIME ZONE 'UTC' AT TIME ZONE 'EST') = 2023
+-- GROUP BY
+-- posting_month
+-- ORDER BY
+-- posting_month;
+-- ------------------------------------------------------------
+-- SELECT DISTINCT
+-- company.name
+-- FROM job_postings_fact AS Job_postings
+-- JOIN
+-- company_dim AS company ON job_postings.company_id=company.company_id
+-- WHERE job_postings.job_health_insurance ='True'
+-- AND EXTRACT (YEAR FROM Job_postings.job_posted_date) =2023
+-- AND EXTRACT (QUARTER FROM Job_postings.job_posted_date) =2;
